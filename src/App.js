@@ -32,6 +32,19 @@ function App() {
     );
   }
 
+  const arr = [
+    {
+      text: 'Simple',
+      alt: 'select simple text',
+      content: 'Simple text content'
+    },
+    {
+      text: 'Fancy',
+      alt: 'select fancy text',
+      content: 'fancy text content'
+    }
+  ];
+
   return (
     <div className='App'>
       <Button
