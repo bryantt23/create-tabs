@@ -6,9 +6,30 @@ function App() {
   const [selectedTab, setSelectedTab] = useState('simple');
   return (
     <div className='App'>
-      <button onClick={() => setSelectedTab('simple')}>Simple</button>
-      <br />
-      <button onClick={() => setSelectedTab('fancy')}>Fancy title</button>
+      <div></div>
+      <button
+        style={{
+          backgroundColor: '#0089f2',
+          color: 'white',
+          borderRadius: 5,
+          padding: '10px 20px'
+        }}
+        onClick={() => setSelectedTab('simple')}
+      >
+        Simple
+      </button>
+      <button
+        style={{
+          color: '#0089f2',
+          backgroundColor: 'white',
+          borderRadius: 5,
+          padding: '10px 20px',
+          border: '1px white solid'
+        }}
+        onClick={() => setSelectedTab('fancy')}
+      >
+        <span style={{ fontWeight: 800 }}>Fancy</span> title
+      </button>
       <br />
       {selectedTab === 'simple' ? <p>Simple text</p> : <p>Fancy title text</p>}
     </div>
