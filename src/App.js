@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
@@ -6,7 +5,6 @@ function App() {
   const [selectedTab, setSelectedTab] = useState('simple');
   return (
     <div className='App'>
-      <div></div>
       <button
         style={{
           backgroundColor: '#0089f2',
