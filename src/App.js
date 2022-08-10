@@ -34,16 +34,6 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <button
-        style={
-          selectedButton === 'simple'
-            ? selectedButtonStyle
-            : nonSelectedButtonStyle
-        }
-        onClick={() => setSelectedButton('simple')}
-      >
-        Simple
-      </button> */}
       <Button
         text='Simple'
         styleObject={
@@ -63,16 +53,6 @@ function App() {
         }
         func={() => setSelectedButton('fancy')}
       />
-      {/* <button
-        style={
-          selectedButton === 'fancy'
-            ? selectedButtonStyle
-            : nonSelectedButtonStyle
-        }
-        onClick={() => setSelectedButton('fancy')}
-      >
-        <span style={{ fontWeight: 800 }}>Fancy</span> title
-      </button> */}
       <br />
       {selectedButton === 'simple' ? (
         <p>Simple text</p>
