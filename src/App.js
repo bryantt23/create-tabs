@@ -23,9 +23,18 @@ const nonSelectedButtonStyle = {
 
 function App() {
   const [selectedButton, setSelectedButton] = useState('simple');
+
+  function Button({ text, styleObject, func }) {
+    return (
+      <button style={styleObject} onClick={func}>
+        {text}
+      </button>
+    );
+  }
+
   return (
     <div className='App'>
-      <button
+      {/* <button
         style={
           selectedButton === 'simple'
             ? selectedButtonStyle
@@ -34,8 +43,27 @@ function App() {
         onClick={() => setSelectedButton('simple')}
       >
         Simple
-      </button>
-      <button
+      </button> */}
+      <Button
+        text='Simple'
+        styleObject={
+          selectedButton === 'simple'
+            ? selectedButtonStyle
+            : nonSelectedButtonStyle
+        }
+        func={() => setSelectedButton('simple')}
+      />
+
+      <Button
+        text='Fancy'
+        styleObject={
+          selectedButton === 'fancy'
+            ? selectedButtonStyle
+            : nonSelectedButtonStyle
+        }
+        func={() => setSelectedButton('fancy')}
+      />
+      {/* <button
         style={
           selectedButton === 'fancy'
             ? selectedButtonStyle
@@ -44,7 +72,7 @@ function App() {
         onClick={() => setSelectedButton('fancy')}
       >
         <span style={{ fontWeight: 800 }}>Fancy</span> title
-      </button>
+      </button> */}
       <br />
       {selectedButton === 'simple' ? (
         <p>Simple text</p>
